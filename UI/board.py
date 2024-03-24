@@ -87,7 +87,6 @@ def draw_polygon(polygon_coords):
     ii.content = f'<polygon points="{",".join(map(lambda p: str(p[0])+","+str(p[1]), polygon_coords))}" fill="none" stroke="red" stroke-width="2" />'
 
 random_polygon_coords = generate_random_polygon()
-
 src = '/home/william/personal/board.jpg'
 ii = ui.interactive_image(src, on_mouse=mouse_handler, events=['mousedown', 'mouseup'], cross=True)
 
