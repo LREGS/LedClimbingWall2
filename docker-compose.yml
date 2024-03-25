@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  gui-app:
+    build: 
+      context: .
+      dockerfile: UI/Dockerfile.python
+    ports:
+      - "8080:8080"  # Expose ports for the GUI application
+
+  go-server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile.golang
+    ports:
+      - "6969:6969"  # Expose ports for the Go server
