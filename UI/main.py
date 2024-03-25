@@ -1,11 +1,11 @@
 import home_page
-
+import Pages
 
 from nicegui import app, ui 
 
 @ui.page("/")
 def index_page() -> None:
-    home_page.content()
+    Pages.create()
 
 ()
-ui.run()
+ui.run(port=8080)
