@@ -1,0 +1,10 @@
+FROM python:3.11.4
+
+WORKDIR /app
+
+COPY UI/requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY UI .
+
+CMD ["python", "main.py"]
